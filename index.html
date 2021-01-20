@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AboutMe</title>
+  <!-- css样式 -->
+  <link rel="stylesheet" type="text/css" href="./css/edit.css">
+  <!-- 引入Vue -->
+  <script src = "https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id = "app">
+    <!-- 导航栏 -->
+    <div :class="getHeaderClasses()">
+      
+      <div class="header_top">
+        <a class="header_logo" href="./index.html">wuu的小站</a>
+        <a class="blog_btn" href="https://www.bilibili.com/">Blog</a>
+        <div class="medium">
+          <h1 class="medium_text_name">Wuu</h1>
+          <p class="medium_text_t">书山有路搞为径<br>学海无涯机作舟</p>
+          <div class="head_image"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  const app = new Vue({
+    el: "#app",
+    data: {
+      message: "你好啊",
+      isHeader: true
+    },
+    methods: {
+      getHeaderClasses: function() {
+        return {header: this.isHeader}
+      }
+    }
+  })
+</script>
+</html>
